@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* 
+    Main container consists of:
+        - Description container(on the left side) which contains
+            1. h1 -> title
+            2. p -> description
+            
+        - Sign up container (on the right side) which contains
+            1. div -> try free 7 days
+            2. box with four input elemnts for firs name, last name, email and password
+            3. button -> claim
+            4. p -> terms and services
+ */
+
+main {
+
+    display: grid;
+    grid-template-areas: "description sign-up";
+    grid-template-columns: 1fr 1fr;
+    width: 65%;
+    margin: auto;
+    margin-top: 10vh;
+
+    font-family: "Poppins";
+}
+
+.description-container {
+
+    grid-area: description;
+    margin-top: 20vh;
+}
+
+
+
+.sign-up-container {
+
+    grid-area: sign-up;
+}
+
+.try-it-free-title-box {
+
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    color: white;
+
+    background-color: #5E54A4;
+    padding: 2.5vh;
+    margin-bottom: 2vh;
+    border-radius: 10px;
+    box-shadow: 0px 8px 0px 0.3px rgba(0,0,0,0.1);
+}
+
+.try-it-free-bold-text {
+
+    font-weight: 600;
+}
+
+.personal-data-container {
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+    padding-top: 3vh;
+
+    background-color: white;
+
+    box-shadow: 0px 8px 0px 0.3px rgba(0,0,0,0.1);
+}
+
+/* Setting propeties for all four inputs */
+
+input {
+
+    background: url(/images/icon-error.svg) no-repeat;
+    background-position: right 1vw top 1.5vh;
+
+
+    border: 2px solid #DEDEDE;
+    border-radius: 5px;
+    padding: 2vh;
+    margin: auto;
+    margin-top: 3vh;
+    width: 80%;
+
+    color: #3D3B48;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.transparent {
+
+    background: transparent;
+}
+
+input:focus {
+    
+    border-color: #5E54A4;
+    color: #3D3B48;
+  }
+
+.hidden-warning {
+
+    font-size: 11px;
+    font-style: italic;
+    color: #FF7979;
+
+    margin-left: 18vw;
+    margin-top: 1vh;
+
+    visibility: hidden;
+}
+
+.claim-button {
+
+    background-color: #38CC8B;
+    display: block;
+
+    width: 86%;
+    margin: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+
+    border-radius: 5px;
+    border: none;
+    padding: 2vh;
+
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    box-shadow: 0px 3px 0px 0.5px rgba(36, 124, 86, 0.7);
+}
+
+.claim-button:hover {
+
+    background-color: #77E2B3;
+}
+
+.terms-and-services-notice {
+
+    color: #BAB7D4;
+    font-size: 10px;
+
+    margin-bottom: 6vh;
+}
+
+.terms-and-servicies {
+
+    color: #FF7979;
+    font-weight: 600;
+}
+
+.description-container {
+
+    color: white;
+    padding-right: 10vh;
+}
+
+.learn-to-code-title {
+
+    font-size: 52px;
+    font-weight: 700;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+}
+
+.learn-to-code-description {
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+/* ----------------------------------------------------------Media queries----------------------------------------------------------*/
+
+/* Smaller desktop screens */
+@media only screen and (max-width: 1260px) {
+    
+    .learn-to-code-title {
+
+        font-size: 44px;
+    }
+    
+    .learn-to-code-description {
+    
+        font-size: 12px;
+    }
+
+    main {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    
+    .learn-to-code-title {
+
+        font-size: 38px;
+    }
+    
+    .learn-to-code-description {
+    
+        font-size: 12px;
+    }
+
+    main {
+        width: 80%;
+    }
+}
+
+/* Setting different design for tablet and mobile devices */
+
+@media only screen and (max-width: 950px) {
+
+    html {
+
+        height: 130%;
+        width: 100%;
+    }
+
+    body {
+    
+        background-image: 
+            url("../images/bg-intro-mobile.png"),
+            linear-gradient(
+            rgba(255, 121, 121, 0.9), 
+            rgba(255, 121, 121, 0.9)
+             );
+        background-size: 50% 100%;
+        background-repeat:repeat-x; 
+        overflow-x:initial;
+    }
+
+    main {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .try-it-free-title-box {
+
+        text-align: center;
+        font-weight: 300;
+        font-size: 16px;
+        color: white;
+    
+        background-color: #5E54A4;
+        padding: 5vh;
+        margin-bottom: 2vh;
+        border-radius: 10px;
+        box-shadow: 0px 8px 0px 0.3px rgba(0,0,0,0.1);
+    }
+    
+    .description-container{
+
+        text-align: center;
+        margin-top: 9vh;
+        padding-right: 0;
+        margin-bottom: 3vh;
+        width: 50%;
+    }
+
+    .learn-to-code-title {
+
+        font-size: 36px;
+        font-weight: 600;
+    }
+    
+    .learn-to-code-description {
+    
+        font-size: 12px;
+    }
+
+    .claim-button {
+
+        padding: 3vh;
+        width: 89%;
+    }
+
+}
+
+@media only screen and (max-width: 754px) {
+
+    html {
+
+        height: 150%;
+        width: 100%;
+    }
+
+    body {
+    
+        background-image: 
+            url("../images/bg-intro-mobile.png"),
+            linear-gradient(
+            rgba(255, 121, 121, 0.9), 
+            rgba(255, 121, 121, 0.9)
+             );
+        background-size: 100% 100%;
+        background-repeat:repeat-x; 
+        overflow-x:initial;
+    }
+
+    .learn-to-code-title {
+
+        font-size: 32px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 653px) {
+
+    html {
+
+        height: 160%;
+        width: 100%;
+    }
+
+    body {
+    
+        background-image: 
+            url("../images/bg-intro-mobile.png"),
+            linear-gradient(
+            rgba(255, 121, 121, 0.9), 
+            rgba(255, 121, 121, 0.9)
+             );
+        background-size: 110% 100%;
+        background-repeat:repeat-x; 
+        overflow-x:initial;
+    }
+
+    .description-container {
+
+        width: 95%;
+    }
+
+    .learn-to-code-title {
+
+        font-size: 25px;
+    }
+
+    .try-it-free-title-box {
+
+        padding: 3.5vh;
+        font-size: 13px;
+        width: 86%;
+    }
+
+    .claim-button {
+        
+        font-size: 13px;
+    }
+}
