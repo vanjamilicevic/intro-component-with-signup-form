@@ -14,7 +14,9 @@
 
 </head>
 <body>
+  <!-- Main container which consists of entire page content -->
   <main>
+    <!-- Description container with title and learn to code description inside -->
     <section class="description-container">
       <h1 class="learn-to-code-title">Learn to code by watching others</h1>
       <p class="learn-to-code-description">
@@ -32,6 +34,12 @@
          then $20/mo. thereafter
       </div>
 
+      <!-- Personal data container which containes:
+            - four inputs
+            - hidden warnings which are displayed by JS when field is not properly filled in
+            - button on the bottom of the container
+            - terms and services notice
+       -->
       <div class="personal-data-container">
 
         <input id="name-input" class="data-input transparent" type="text" placeholder="First Name">
@@ -48,12 +56,18 @@
         </button>
 
         <p class="terms-and-services-notice">
-          By clicking the button, you are agreeing to our <span class="terms-and-servicies">Terms and Services</span>
+          By clicking the button, you are agreeing to our 
+          <br>
+          <span class="terms-and-servicies">
+            Terms and Services
+          </span>
         </p>
 
       </div>
 
     </section>
+    
+    <!-- Adding JS -->
     <script src="Utils/index.js"></script>
   </main>
 </body>
