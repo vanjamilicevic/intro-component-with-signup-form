@@ -38,11 +38,12 @@ document.getElementById('button').addEventListener('click', function() {
         document.getElementsByClassName("hidden-warning")[2].style.visibility = "visible";
         document.getElementById("email-input").style.borderColor = "#FF7979";
         document.getElementById("email-input").classList.remove("transparent");
-        document.getElementById("email-input").placeholder = "";
+        document.getElementById("email-input").style.color = "#FF7979";
     } else {
         document.getElementsByClassName("hidden-warning")[2].style.visibility = "hidden";
         document.getElementById("email-input").style.borderColor = "#DEDEDE";
         document.getElementById("email-input").classList.add("transparent");
+        document.getElementById("email-input").style.color = "#3D3B48";
     }
 
     if (!passvordValue) {
@@ -52,7 +53,7 @@ document.getElementById('button').addEventListener('click', function() {
         document.getElementById("password-input").placeholder = "";
     } else {
         document.getElementsByClassName("hidden-warning")[3].style.visibility = "hidden";
-        document.getElementById("passvord-input").style.borderColor = "#DEDEDE";
+        document.getElementById("password-input").style.borderColor = "#DEDEDE";
         document.getElementById("password-input").classList.add("transparent");
     }
 });
